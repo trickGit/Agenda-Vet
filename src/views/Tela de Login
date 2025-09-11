@@ -1,1 +1,39 @@
 
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mensagem</title>
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 20%;
+      font-size: 3em;
+      animation: pisca 1s infinite;
+    }
+
+    @keyframes pisca {
+      0%   { opacity: 1; }
+      50%  { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="mensagem">chupa matheus</div>
+
+  <script>
+    // Faz a mensagem rodar na aba do navegador
+    let msg = " 🔥 chupa matheus 🔥 ";
+    let i = 0;
+    function rodarTitulo() {
+      document.title = msg.substring(i) + msg.substring(0, i);
+      i = (i + 1) % msg.length;
+      setTimeout(rodarTitulo, 200);
+    }
+    rodarTitulo();
+  </script>
+</body>
+</html>
