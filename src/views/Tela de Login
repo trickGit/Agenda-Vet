@@ -5,35 +5,41 @@
   <title>Mensagem</title>
   <style>
     body {
-      background-color: black;
-      color: lime;
+      background-color: #000;
+      color: #00FF00;
       font-family: Arial, sans-serif;
       text-align: center;
-      margin-top: 20%;
+      margin-top: 20vh;
       font-size: 3em;
       animation: pisca 1s infinite;
     }
 
     @keyframes pisca {
-      0%   { opacity: 1; }
-      50%  { opacity: 0; }
-      100% { opacity: 1; }
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    #mensagem {
+      padding: 20px;
+      border-radius: 10px;
+      background: rgba(0, 255, 0, 0.1);
+      display: inline-block;
     }
   </style>
 </head>
 <body>
-  <div id="mensagem">chupa matheus</div>
+  <div id="mensagem">🔥 chupa matheus 🔥</div>
 
   <script>
     // Faz a mensagem rodar na aba do navegador
-    let msg = " 🔥 chupa matheus 🔥 ";
+    const msg = " 🔥 chupa matheus 🔥 ";
     let i = 0;
     function rodarTitulo() {
       document.title = msg.substring(i) + msg.substring(0, i);
       i = (i + 1) % msg.length;
       setTimeout(rodarTitulo, 200);
     }
-    rodarTitulo();
+    window.onload = rodarTitulo;
   </script>
 </body>
 </html>
