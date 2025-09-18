@@ -5,6 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Agenda Vet</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #f5f6fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2dda6f;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .login-container {
+            background: #fff;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 32px 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+        }
+        .login-container h2 {
+            margin-bottom: 24px;
+            color: #4ada2d;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #34495e;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dcdde1;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .actions a {
+            font-size: 0.95em;
+            color: #2dda7b;
+            text-decoration: none;
+        }
+        .actions a:hover {
+            text-decoration: underline;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #2dda58;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: #38d660;
+        }
+        .register-link {
+            text-align: center;
+            margin-top: 18px;
+        }
+        .register-link a {
+            color: #38d67a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,14 +96,27 @@
         <section class="login-container">
             <h2>Login</h2>
             <form action="#" method="post">
-                <label for="username">Usuário:</label>
-                <input type="text" id="username" name="username" required>
-                
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required>
-                
+                <div class="form-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                </div>
+                <div class="actions">
+                    <label>
+                        <input type="checkbox" name="remember" id="remember">
+                        Lembrar-me
+                    </label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
                 <button type="submit">Entrar</button>
             </form>
+            <div class="register-link">
+                <span>Não tem uma conta?</span>
+                <a href="#">Cadastre-se</a>
+            </div>
         </section>
     </main>
 </body>
