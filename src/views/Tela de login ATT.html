@@ -7,85 +7,109 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background: #f5f6fa;
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
         header {
-            background: #2dda6f;
+            background: linear-gradient(90deg, #43ea7c 0%, #2ecc71 100%);
             color: #fff;
-            padding: 20px 0;
+            padding: 32px 0 24px 0;
             text-align: center;
+            box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+        }
+        header h1 {
+            font-size: 2.2em;
+            letter-spacing: 2px;
+            margin: 0;
+            font-weight: 700;
         }
         .login-container {
             background: #fff;
             max-width: 400px;
-            margin: 40px auto;
-            padding: 32px 24px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+            margin: 48px auto;
+            padding: 40px 32px 32px 32px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+            border-top: 6px solid #43ea7c;
         }
         .login-container h2 {
-            margin-bottom: 24px;
-            color: #4ada2d;
+            margin-bottom: 28px;
+            color: #2ecc71;
             text-align: center;
+            font-size: 1.7em;
+            font-weight: 600;
         }
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 22px;
         }
         label {
             display: block;
-            margin-bottom: 6px;
-            color: #34495e;
+            margin-bottom: 8px;
+            color: #388e3c;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
         input[type="text"], input[type="password"] {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #dcdde1;
-            border-radius: 4px;
+            padding: 12px;
+            border: 1.5px solid #b2dfdb;
+            border-radius: 6px;
             box-sizing: border-box;
+            font-size: 1em;
+            background: #f7fff7;
+            transition: border 0.2s;
+        }
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #43ea7c;
+            outline: none;
         }
         .actions {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 12px;
+            margin-bottom: 18px;
+        }
+        .actions label {
+            display: flex;
+            align-items: center;
+            font-size: 0.98em;
+            color: #388e3c;
+        }
+        .actions input[type="checkbox"] {
+            accent-color: #43ea7c;
+            margin-right: 6px;
         }
         .actions a {
-            font-size: 0.95em;
-            color: #2dda7b;
+            font-size: 0.97em;
+            color: #43ea7c;
             text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
         }
         .actions a:hover {
+            color: #2ecc71;
             text-decoration: underline;
         }
         button[type="submit"] {
             width: 100%;
-            padding: 12px;
-            background: #2dda58;
+            padding: 14px;
+            background: linear-gradient(90deg, #43ea7c 0%, #2ecc71 100%);
             color: #fff;
             border: none;
-            border-radius: 4px;
-            font-size: 1em;
+            border-radius: 8px;
+            font-size: 1.08em;
+            font-weight: 600;
             cursor: pointer;
-            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+            transition: background 0.2s, box-shadow 0.2s;
         }
         button[type="submit"]:hover {
-            background: #38d660;
+            background: linear-gradient(90deg, #2ecc71 0%, #43ea7c 100%);
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.14);
         }
-        .register-link {
-            text-align: center;
-            margin-top: 18px;
-        }
-        .register-link a {
-            color: #38d67a;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .register-link a:hover {
-            text-decoration: underline;
-        }
+        
     </style>
 </head>
 <body>
@@ -113,10 +137,7 @@
                 </div>
                 <button type="submit">Entrar</button>
             </form>
-            <div class="register-link">
-                <span>Não tem uma conta?</span>
-                <a href="#">Cadastre-se</a>
-            </div>
+            
         </section>
     </main>
 </body>
